@@ -1,0 +1,177 @@
+:root {
+    --font: 'Space Grotesk', sans-serif;
+    --White: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red: hsl(0, 100%, 66%);
+}
+
+body {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: var(--font);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: var(--very-dark-violet);
+}
+
+.container {
+    display: flex;
+}
+
+.container .left-content {
+    background-image: url('/images/bg-main-desktop.png');
+    /* background-image: linear-gradient(135deg, var(--very-dark-violet), hsl(249, 78%, 55%), hsl(278, 94%, 30%), var(--very-dark-violet)); */
+    height: 100vh;
+    width: 30%;
+}
+
+.left-content .cards {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    top: 18%;
+}
+
+.cards .card-front img, .cards .card-back img{
+    /* filter: drop-shadow(1px 1px 7px rgb(184, 184, 184)); */
+}
+
+.cards .card-front{
+    margin-bottom: 32px;
+}
+
+.cards .card-front .card-logo {
+    position: absolute;
+    left: 35px;
+    top: 25px;
+}
+
+span, #month-year {
+    user-select: none;
+}
+
+.cards .card-front #span-card-number {
+    position: absolute;
+    left: 35px;
+    top: 140px;
+    font-size: 27px;
+    letter-spacing: 4px;
+    color: var(--White);
+}
+
+.cards .card-front #span-card-name {
+    position: absolute;
+    left: 35px;
+    top: 200px;
+}
+
+.cards .card-front #month-year {
+    position: absolute;
+    right: 115px;
+    top: 200px;
+}
+
+.cards .card-back #span-card-cvc {
+    position: absolute;
+    bottom: 120px;
+    right: 60px;
+}
+
+.cards .card-front #month-year, .cards .card-front #span-card-name, .cards .card-back #span-card-cvc {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--White);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#span-barra, #span-card-month, #span-card-year {
+    padding: 0;
+    margin: 0;
+}
+
+.cards .card-back{
+    margin-left: 75px;
+}
+
+.container .right-content {
+    background-color: var(--White);
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-content__content_one {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.right-content__content_two {
+    display: flex;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.right-content__content_two .input-group .inputs {
+    display: flex;
+    justify-content:  space-between;
+}
+
+.inputs .input {
+    width: 60px;
+}
+
+.input-group.cvc {
+    margin-left: 32px;
+}
+
+#card-cvc {
+    width: 160px;
+}
+
+#card-year {
+    margin-left: 16px;
+}
+
+.input-group .label-form {
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.input-group .input {
+    height: 28px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px solid var(--light-grayish-violet);
+    font-size: 18px;
+}
+
+.input-group .input::-webkit-input-placeholder {
+    font-family: var(--font-family);
+    color: var(--light-grayish-violet);
+  }
+
+  #btn_confirm {
+    width: 380px;
+    height: 48px;
+    border-radius: 10px;
+    color: var(--White);
+    background-color: var(--very-dark-violet);
+    font-size: 18px;
+    font-family: var(--font);
+    cursor: pointer;
+  }
